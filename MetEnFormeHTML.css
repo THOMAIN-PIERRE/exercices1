@@ -1,0 +1,28 @@
+body{
+    background-color: #327fa8;
+}
+header{
+    background-color: #327fa8;
+    width: 100%;
+    height: 280px;
+}
+nav{
+    background-color: #325da8;
+    width: 100%;
+    height: 130px;
+    
+}
+aside{
+    background-color: #323ea8;
+    float: right;
+    width: 450px;
+    height: 900px;
+}
+footer{
+    background-color: #5b32a8;
+    width: 100%;
+    height: 130px;
+    clear: both;
+}
+   
+

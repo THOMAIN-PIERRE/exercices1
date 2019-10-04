@@ -1,0 +1,30 @@
+/*REQUETE DE MEDIA : IMPRESSION */
+
+        /*Requête média visant a avoir une certaine mise en page pour l'impression d'un document*/
+        @media print{
+            header{
+                -webkit-print-color-adjust:exact;
+            }
+
+            div{
+                page-break-after:always;
+            }
+            #poussin1{
+                display: none;
+            }
+            #poussin2{
+                display: none;
+            }
+            #conteneur{
+                width: 100%;
+                margin: 0;
+            }
+            #left{
+                float: none;
+                width: auto;
+            }
+            #right{
+                float: none;
+                width: auto;
+            }
+            }
