@@ -14,6 +14,7 @@
         position: sticky; /*pour fixer le menu dans une position bien précise*/
         top: 0px; 
     }
+    /*Enleve les puces de mon menu liste*/
     nav ul{
         list-style-type: none;
     }
@@ -27,6 +28,7 @@
         display: table;
         clear: both;
     }
+    /*Affichage des icônes au passage de la souris grâce au paramètre "diplay: block"*/
     nav a{
         display: block;
         text-decoration: underline;
@@ -35,23 +37,32 @@
         font-weight: bold;
         font-size: 30px;
     }
+    /*Les mots prennent une teinte plus sombre au passage de la souris*/
     nav a:hover{
         color: rgb(133, 5, 5);
        
     }
+    /*Non affichage des éléments du sous menu grâce au paramètre "display: none"*/
     .sousmenu{
         display: none;
         box-shadow: 0px 1px 2px #CCC;
         background-color: white;
     }
+    /*Ligne de code pour cibler le sous-menu*/
     nav > ul li:hover .sousmenu{
         display: block;
     }
+    /*On annule le flottement hérité des onglets du menu principal. On va vouloir 
+    que les éléments de nos sous-menus s’affichent cette fois-ci les uns en dessous 
+    des autres, occupent tout l’espace disponible dans leur conteneur et que le texte soit aligné à gauche. */
     .sousmenu li{
         float: none;
         width: 100%;
         text-align: left;
     }
+    /* On va mettre en forme les onglets de nos sous-menus et s’appuyant une nouvelle fois sur les styles déjà créées.
+     Ici, on va se contenter de supprimer la bordure basse héritée du menu principal, d’ajouter une marge interne et une
+    couleur de fond lorsqu’on passe la souris sur un élément.*/
     .sousmenu a{
         padding: 10px;
         border-bottom: none;
@@ -61,11 +72,18 @@
         border-bottom: none;
         background-color: rgba(200,200,200,0.1);
     }
+    /*On va insérer le symbole ▼après le texte en utilisant le pseudo-élément ::after, ce qui va également nous permettre 
+    de définir la taille du symbole.*/
     .deroulant > a::after{
         content: "▼";
         font-size: 12px;
     }
-    .sousmenu {
+    /*Les caractéristiques physiques de mon sous- menu*/
+    /*position : absolute à nos sous-menus, ce qui va avoir pour effet de les retirer du flux normal de la page.
+     Les sous-menus n’impacteront plus le contenu suivant le menu. Pour que les sous-menus ne passent pas derrière
+    le contenu qui suit le menu, nous allons également définir un z-index élevé. Nous allons également définir la
+    taille des sous-menus à 100%.*/
+    .sousmenu{
         display: none;
         box-shadow: 0px 1px 2px #CCC;
         background-color: white;
@@ -73,6 +91,8 @@
         width: 100%;
         z-index: 1000;
         }
+    /*Pour replacer les sous-menus correctement sous leur onglet correspondant et pour qu’ils fassent bien la 
+    même taille, on va également appliquer une position : relative aux éléments du menu principal.*/
     nav ul li{
         float: left;
         width: 25%;
