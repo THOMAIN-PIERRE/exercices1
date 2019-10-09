@@ -1,0 +1,214 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #571C35;
+}
+/*FLIP CARD ETE --------------------------------------------------------------------------------*/ 
+.flip-card-été {
+    background-color: transparent;
+    width: 300px;
+    height: 420px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-top: 180px;
+    margin-left: 90px;
+  }
+  .flip-card-été img{
+      max-width: 75%;
+      height: 320px;
+      padding-top: 20px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner-été {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card-été:hover .flip-card-inner-été {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front-été, .flip-card-back-été {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front-été {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back-été {
+    background-color: white;
+    border: 6px solid lightgrey;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+/*FLIP CARD AUTOMNE --------------------------------------------------------------------------------*/ 
+  .flip-card-automne {
+    background-color: transparent;
+    width: 300px;
+    height: 420px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-top: 180px;
+    margin-left: 440px;
+    position: relative;
+    bottom: 600px;
+  }
+  .flip-card-automne img{
+      max-width: 75%;
+      height: 320px;
+      padding-top: 20px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner-automne {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card-automne:hover .flip-card-inner-automne {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front-automne, .flip-card-back-automne {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front-automne {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back-automne {
+    background-color: white;
+    border: 6px solid lightgrey;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  /*FLIP CARD HIVER --------------------------------------------------------------------------------*/ 
+.flip-card-hiver {
+    background-color: transparent;
+    width: 300px;
+    height: 420px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-top: 180px;
+    margin-left: 790px;
+    position: relative;
+    bottom: 1200px;
+  }
+  .flip-card-hiver img{
+      max-width: 75%;
+      height: 320px;
+      padding-top: 20px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner-hiver {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card-hiver:hover .flip-card-inner-hiver {
+    transform: rotateY(180deg);
+  }
+  /* Position the front and back side */
+  .flip-card-front-hiver, .flip-card-back-hiver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front-hiver {
+    background-color: white;
+    color: black;
+  }
+  /* Style the back side */
+  .flip-card-back-hiver {
+    background-color: white;
+    border: 6px solid lightgrey;
+    color: black;
+    transform: rotateY(180deg);
+  }
+/*FLIP CARD PRINTEMPS --------------------------------------------------------------------------------*/ 
+  .flip-card-printemps {
+    background-color: transparent;
+    width: 300px;
+    height: 420px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-top: 180px;
+    margin-left: 1140px;
+    position: relative;
+    bottom: 1800px;
+  }
+  .flip-card-printemps img{
+      max-width: 75%;
+      height: 320px;
+      padding-top: 20px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner-printemps {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card-printemps:hover .flip-card-inner-printemps {
+    transform: rotateY(180deg);
+  }
+  /* Position the front and back side */
+  .flip-card-front-printemps, .flip-card-back-printemps {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front-printemps {
+    background-color: white;
+    color: black;
+  }
+  /* Style the back side */
+  .flip-card-back-printemps {
+    background-color: white;
+    border: 6px solid lightgrey;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+ 

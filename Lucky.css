@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}    
+    canvas {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+.message{
+    width: 900px;
+    height: 70px;
+    position: relative;
+    bottom: 300px;
+    left: 200px;
+}
+.rabbit img{
+    position: absolute;
+    bottom: 55px;
+    animation-name: followrabbit;
+    animation-duration: 6s;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+@keyframes followrabbit{
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: 88%;
+    }
+}
+h2{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    z-index: 1;
+}
+.neo img{
+    position: absolute;
+    bottom: 55px;
+    height: 330px;
+    animation-name: neorunning;
+    animation-duration: 6s;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+@keyframes neorunning{
+    30% {
+        right: 0%;
+    }
+    100% {
+        right: 70%;
+    }
+}
+
