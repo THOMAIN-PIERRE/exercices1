@@ -70,13 +70,14 @@
     }
     .sousmenu a:hover{
         border-bottom: none;
-        background-color: rgba(200,200,200,0.1);
+        background-color: rgba(200,200,200,0);
+        display: inline;
     }
     /*On va insérer le symbole ▼après le texte en utilisant le pseudo-élément ::after, ce qui va également nous permettre 
-    de définir la taille du symbole.*/
+    de définir la taille du symbole.
     .deroulant > a::after{
         content: "▼";
-        font-size: 12px;
+        font-size: 12px;*/
     }
     /*Les caractéristiques physiques de mon sous- menu*/
     /*position : absolute à nos sous-menus, ce qui va avoir pour effet de les retirer du flux normal de la page.
@@ -103,15 +104,34 @@
 <body>
     <nav>
        <ul>
-           <li><a href="" target="_blank">Alpha</a></li>
-           <li><a href="" target="_blank">Beta</a></li>
+           <li><a href="" target="_blank">Alpha</a>
                 <ul class="sousmenu">
-                    <li><a href="" target="_blank">Nu</a></li>
-                    <li><a href="" target="_blank">Phi</a></li>
-                    <li><a href="" target="_blank">Rau</a></li>
+                    <li><a href="" target="_blank">Nu</a>
+                    <li><a href="" target="_blank">Phi</a>
+                    <li><a href="" target="_blank">Rau</a>
                 </ul>
-           <li><a href="" target="_blank">Kappa</a></li>
-           <li><a href="" target="_blank">Zeta</a></li>
+            </li>
+           <li><a href="" target="_blank">Beta</a>
+                <ul class="sousmenu">
+                    <li><a href="" target="_blank">Nu</a>
+                    <li><a href="" target="_blank">Phi</a>
+                    <li><a href="" target="_blank">Rau</a>
+                </ul>
+            </li>
+           <li><a href="" target="_blank">Kappa</a>
+                <ul class="sousmenu">
+                    <li><a href="" target="_blank">Nu</a>
+                    <li><a href="" target="_blank">Phi</a>
+                    <li><a href="" target="_blank">Rau</a>
+                </ul>
+            </li>
+           <li><a href="" target="_blank">Zeta</a>
+                <ul class="sousmenu">
+                    <li><a href="" target="_blank">Nu</a>
+                    <li><a href="" target="_blank">Phi</a>
+                    <li><a href="" target="_blank">Rau</a>
+                </ul>
+            </li>
        </ul>   
     </nav>
 </body>

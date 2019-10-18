@@ -1,38 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+    @import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
     html, body, section{
+    width:100%;
+    height:100%;
     padding:0;
     margin:0;
-    height:100%;
-    width:100%;
-    background:#000;
-    color:#FFF;
-    font-family: Arial, Helvetica, sans-serif;
+    background:black;
+    font-family: Arial;
+    color:white;
+    font-family: 'Do Hyeon', sans-serif;
 }
 h1{
-    width:100%;
     text-align:center;
 }
 section article{
-    float:left;
-    min-width:200px;
-    min-height:200px;
+    float: left;
+  
     background-color:grey;
-    margin:30px;
-    padding:30px;
+    margin:20px;
+    padding:20px;
+    }
+h2{
+    text-align: center;
 }
-section article h1{
-    width:100%;
-    line-height:250px;
-    text-align:center;
+.article5{
+    position: absolute;
+    top: 615px;
+    right: 1210px;
+    width: 230px;
+    height: 80px;
+    margin-left: 3px;
 }
-section article:nth-child(1){
+.article6{
+    position: absolute;
+    left: 1045px;
+    top: 230px;
+    width: 395px;
+    height: 40px;
+}
+.article7{
+    position: absolute;
+    left: 1430px;
+    width: 30px;
+    height: 200px;
+    bottom: 450px;
+    background-color:blue;
+}
+
+section article:nth-child(3){
+    position: relative;
+    width: 350px;
+    height: 200px;
+    margin-left: 300px;
+    bottom: 25px;
+}
+section article:nth-child(4){
+    position: relative;
+    width: 350px;
+    height: 3OOpx;
+    margin-left: 10px;
+    bottom: 25px;
+}
+footer{
+    position:absolute;
+    bottom: 0;
+    width:300px;
+    left: 50%;
+    margin-left:-150px;
+    background-color:blue;
+}
+.article1{
+    position: relative;
+    margin-left: 2px;
+    left: 10px;
+    width: 500px;
+    height: 200px;
+    bottom: 20px;
+
+}
+.article2{
+    position: relative;
+    margin-left: 10px;
+    bottom: 20px;
+    left: 10px;
+    width: 700px;
+    height: 200px;
+    bottom: 20px;
+
+}
+.article6{
+    position: relative;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*section article:nth-child(1){
     width:35%;
 }
 section article:nth-child(2){
@@ -67,37 +147,38 @@ footer{
     margin-left:-150px;
     background-color:blue;
 }
-footer h1{
+footer p{
     width:100%;
     text-align: center;
-}   
+    position: fixed;
+}   */
     </style>
 </head>
 <body>
-    <h1>Mets en forme ce HTML</h1>
+    <h1>Titre de l'application</h1>
     <section>
-        <article>
-            <h1>1</h1>
+        <article class="article1">
+            <h2>1</h2>
         </article>
-        <article>
-            <h1>2</h1>
+        <article class="article2">
+            <h2>2</h2>
         </article>
-        <article>
-            <h1>3</h1>
+        <article class="article3">
+            <h2>3</h2>
         </article>
-        <article>
-            <h1>4</h1>
+        <article class="article4">
+            <h2>4</h2>
         </article>
-        <article>
-            <h1>5</h1>
+        <article class="article5">
+            <h2>5</h2>
         </article>
-        <article>
-            <h1>6</h1>
+        <article class="article6">
+            <h2>6</h2>
         </article>
-        <article>
-         <h1>7</h1>
+        <article class="article7">
+            <h2>7</h2>
         </article>
         </section>
-        <footer><h1>^^</h1></footer>
+        <footer class="footer1"><h2>^^</h2></footer>
 </body>
 </html>

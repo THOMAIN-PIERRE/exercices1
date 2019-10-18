@@ -11,7 +11,6 @@ body {
 }
 /*FLIP CARD ETE --------------------------------------------------------------------------------*/ 
 .flip-card-été {
-    background-color: transparent;
     width: 300px;
     height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -26,7 +25,7 @@ body {
   
   /* This container is needed to position the front and back side */
   .flip-card-inner-été {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -63,7 +62,6 @@ body {
 
 /*FLIP CARD AUTOMNE --------------------------------------------------------------------------------*/ 
   .flip-card-automne {
-    background-color: transparent;
     width: 300px;
     height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -80,7 +78,7 @@ body {
   
   /* This container is needed to position the front and back side */
   .flip-card-inner-automne {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -116,7 +114,6 @@ body {
   }
   /*FLIP CARD HIVER --------------------------------------------------------------------------------*/ 
 .flip-card-hiver {
-    background-color: transparent;
     width: 300px;
     height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -132,7 +129,7 @@ body {
   }
   /* This container is needed to position the front and back side */
   .flip-card-inner-hiver {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -164,7 +161,6 @@ body {
   }
 /*FLIP CARD PRINTEMPS --------------------------------------------------------------------------------*/ 
   .flip-card-printemps {
-    background-color: transparent;
     width: 300px;
     height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -180,7 +176,7 @@ body {
   }
   /* This container is needed to position the front and back side */
   .flip-card-inner-printemps {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;

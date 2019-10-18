@@ -2,6 +2,9 @@
 
         /*Requête média visant a avoir une certaine mise en page pour l'impression d'un document*/
         @media print{
+            body, html{
+                margin: 0%;
+            }
             header{
                 -webkit-print-color-adjust:exact;
             }
@@ -15,16 +18,12 @@
             #poussin2{
                 display: none;
             }
-            #conteneur{
-                width: 100%;
-                margin: 0;
-            }
             #left{
                 float: none;
-                width: auto;
+                
             }
             #right{
                 float: none;
-                width: auto;
+            
             }
             }
