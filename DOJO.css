@@ -1,0 +1,154 @@
+html, body{
+    padding:0px;
+    margin:0px;
+    width: 100%;
+    Height: 100%;
+}
+
+header{
+    width:100%;
+    height: 20%;
+    background-color: #e0e0e0;
+}
+.header_un{
+    position: relative;
+    left: 40%;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+}
+.header_deux{
+    position: relative;
+    left: 25%;
+    top: 20%;
+    width: 15%;
+    height: 22%;
+    border-radius: 100%;;
+    background-color: #999999;
+}
+.header_trois{
+    position: absolute;
+    left: 60%;
+    bottom: 50%;
+    top: 20%;
+    width: 15%;
+    height: 22%;
+    border-radius: 100%;
+    background-color: #999999;
+}
+.header_quatre{
+    position: absolute;
+    left: 30%;
+    bottom: 50%;
+    top: 70%;
+    width: 40%;
+    height: 5%;
+    background-color: #cccccc;
+}
+.header_cinq{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #7F7F7F;
+}
+.header_six{
+    position: absolute;
+    bottom: 5%;
+    left: 996%;
+    width: 90%;
+    height: 90%;
+    background-color: #7F7F7F;
+}
+nav{
+    background-color: #cccccc;
+    width:100%;
+    height: 3%;
+}
+.nav_un{
+    position: relative;
+    left: 45%;
+    width: 5%;
+    height: 100%;
+    background-color: white; 
+}
+section{
+    background-color: #999999;
+    width:100%;
+    height: 45%;
+}
+.section_un{
+    position: relative;
+    left: 38%;
+    width: 19%;
+    height: 100%;
+    background-color: white; 
+}
+.section_deux{
+    position: absolute;
+    left: 31%;
+    bottom: 32%;
+    width: 6%;
+    height: 45%;
+    background-color: white; 
+    animation-name: leverlesbrassicontent;
+    animation-duration: 6s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-out;
+}
+.section_trois{
+    position: absolute;
+    left: 58%;
+    bottom: 32%;
+    width: 6%;
+    height: 45%;
+    background-color: white; 
+    animation-name: leverlesbrassicontent;
+    animation-duration: 6s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-out;
+}
+footer{
+    background-color: #7F7F7F;
+    width:100%;
+    height: 33%;
+}
+.footer_un{
+    position: relative;
+    left: 39%;
+    bottom: 18%;
+    width: 8%;
+    height: 100%;
+    background-color: white; 
+}
+.footer_deux{
+    position: absolute;
+    left: 48%;
+    bottom: 5%;
+    width: 8%;
+    height: 33%;
+    background-color: white; 
+}
+.footer_trois{
+    position: absolute;
+    left: 48%;
+    bottom: 0%;
+    width: 8%;
+    height: 4%;
+    background-color: white; 
+}
+.footer_quatre{
+    position: absolute;
+    left: 39%;
+    bottom: 0%;
+    width: 8%;
+    height: 4%;
+    background-color: white; 
+}
+@keyframes leverlesbrassicontent {
+    0% {
+        bottom: 32%;
+    }
+    100% {
+        bottom: 75%;
+    }
+}
