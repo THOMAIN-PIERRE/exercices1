@@ -7,16 +7,35 @@
     <title>Document</title>
 </head>
 <body>
+
   <script>
-  for(let i=0; i<=10; i++)  {
-      if(i=0){
-          console.log("Le manège démarre");
+      
+      /*let nombreTours=10;
+      console.log("Le manège démarre");
+      for(let tours=1; tours<=nombreTours; tours++)
+        {
+      console.log("C'est le tour numéro" + tours);
+        }
+      console.log("Le manège s'arrête");*/
+
+      
+
+      let nbTickets = Number(prompt("Combien de tickets voulez-vous ?"));
+      if (nbTickets === 0)
+      {
+        console.log("Saisisez un nombre de Tickets !");
       }
-      else {
-          console.log("C'est le tour numéro + i")
+      while (nbTickets>0) {
+        nbTickets--;
+        let nombreTours=10;
+      console.log("Le manège démarre");
+        for(let tours=1; tours<=nombreTours; tours++)
+        {
+      console.log("C'est le tour numéro" + tours);
+        }
+      console.log("Le manège s'arrête");
       }
-      console.log(i);
-  }
+      
   </script>
 
 

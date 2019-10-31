@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>Pierre Thomain</p>
+    <script>
+ function nb_aleatoire(min, max)
+{
+     var nb = min + (max-min+1)*Math.random();
+     return Math.floor(nb);
+}
+    let nb = nb_aleatoire(1, 100);  // nb a deviner
+let cpt = 0;    // nb de coups
+let saisie;
+let msg = 'Le nombre à deviner est compris entre 1 et 100.';
+
+do
+{
+     saisie = prompt(msg);
+     cpt++;
+     // message a afficher au prochain tour :
+     if(saisie > nb)
+          msg = "C'est moins";
+     else
+          msg = "C'est plus";
+}
+while(saisie != nb);
+
+alert("Bravo, tu as gagne en " + cpt + " coups !");
+    </script>
+</body>
+</html>
