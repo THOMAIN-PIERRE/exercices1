@@ -15,7 +15,7 @@ body {
     height: 420px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin-top: 180px;
-    margin-left: 90px;
+    margin-left: 70px;
   }
   .flip-card-été img{
       max-width: 75%;
