@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="4_horloge.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <section id="horloge">
+        <article class="hours-container">
+          <div class="heure"></div>
+        </article>
+        <article class="minutes-container">
+          <div class="minute"></div>
+        </article>
+        <article class="seconds-container">
+          <div class="seconde"></div>
+        </article>
+        <div class="trois">3</div>
+        <div class="six">6</div>
+        <div class="neuf"">9</div>
+        <div class="douze">12</div>
+      </section>
+      
+    <script src="4_horloge.js">
+
+    </script>
+</body>
+</html>
+
+    
+    <!--Code HTML pour une horloge digitale--------------------------------------------------
+   
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+    <p id="demo"></p>
+    
+    <script>
+    var myVar=setInterval(function(){myTimer()},1000);
+    
+    function myTimer()
+    {
+    var d=new Date();
+    var t=d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML=t;
+    }
+    </script>
+    
+    </body>
+    </html>-->
+
+
+   

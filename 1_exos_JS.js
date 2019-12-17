@@ -50,9 +50,9 @@ alert (temp2);*/
 // document.getElementById("identifiant").style.textAlign = "right";
 
 /*Ajouter 3 div contenant du texte*/
-// let div1 = document.createElement("div");
-// div1.textContent = "premier texte";
-// document.getElementById("conteneur").appendChild(div1);
+let div1 = document.createElement("div");
+div1.textContent = "premier texte";
+document.getElementById("conteneur").appendChild(div1);
 
 // let div2 = document.createElement("div");
 // div2.textContent = "deuxième texte";
@@ -82,18 +82,18 @@ console.log(sourceimage);
 /*Affichage image dans ma page*/
 /*let img = document.createElement("img");
 img.src = "https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/0/d/3/0d32123a56_50034121_galaxie-andromede-03.jpg";
-document.getElementById("conteneur").appendChild(img);*/
+document.getElementById("conteneur").appendChild(img);
 
 /*Changer l'image quand on clique dessus*/
 /*Méthode : on affecte une fonction a un élément*/
 /*img.onclick = function () { 
     this.style.borderRadius = "60%"; 
     this.style.transitionDuration = "0.8s";
-};*/
+};
 
 /*Exo n° 5 : Amélioration du code JS mouse enter*/
 /*Couleur revient à l'état initial lorsque la souris sort de l'élément h1*/
-let titre = document.getElementById("toto");
+/*let titre = document.getElementById("toto");
 console.log(titre);
 titre.addEventListener('mouseover', over);
 function over(){
@@ -102,11 +102,11 @@ function over(){
 titre.addEventListener('mouseleave', leave);
 function leave(){
 	titre.style.color = "black";
-};
+};*/
 
 /*Exo n° 6 : Créer 2 paragraphes contenant du texte*/
 
-let paragraphe1 = document.createElement("p");
+/*let paragraphe1 = document.createElement("p");
 paragraphe1.id = "idp1";
 paragraphe1.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 document.body.appendChild(paragraphe1);
@@ -128,7 +128,7 @@ document.getElementById("idp2").style.paddingLeft = "20px";
 document.getElementById("idp2").style.paddingRight = "20px";
 document.getElementById("idp2").style.lineHeight ="30px";
 
-document.querySelector("div");
+document.querySelector("div");*/
 
 
 

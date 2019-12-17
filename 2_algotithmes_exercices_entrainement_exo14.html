@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let tab = [10,15,11,3,8,19,5,12,16,7];
+        let tabLength = tab.length;
+        console.log(tabLength);
+        let somme = 0;
+
+        for(let indice = 0; indice <= tabLength-1; indice ++){
+                somme = somme + tab[indice];
+                console.log(somme);  
+            };
+        //Renvoyer la valeur maximale d'un tableau
+        console.log(Math.max(...tab));
+
+        //Renvoyer la valeur mminimale d'un tableau
+        console.log(Math.min(...tab));
+        
+    
+    </script>
+</body>
+</html>

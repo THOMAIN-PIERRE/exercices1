@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let valeur = prompt("Saisissez un nombre compris entre 1 et 9999");
+    console.log(typeof valeur);
+    console.log(valeur);
+
+    let chiffreUnite = valeur%10
+    console.log("Le chifre des unités est : " + chiffreUnite);
+    
+    let chiffreDizaine =((valeur - chiffreUnite)/10)%10;
+    console.log("Le chifre des dizaines est : " + chiffreDizaine);
+
+    let chiffreCentaine = ((valeur - chiffreUnite - 10 * chiffreDizaine)/100)%10;
+    console.log("Le chifre des centaines est : " + chiffreCentaine);
+
+    let chiffreMillier = (valeur - chiffreUnite - 10 * chiffreDizaine - 100 * chiffreCentaine)/1000;
+    console.log("Le chifre des milliers est : " + chiffreMillier);
+    
+    </script>
+</body>
+</html>

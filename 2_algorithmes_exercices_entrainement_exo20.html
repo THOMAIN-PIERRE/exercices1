@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "time"></div>
+ 
+    <script>
+        
+    /*let duree = Number(prompt("Veuillez saisir un nombre de secondes")); //en secondes
+    let heures = duree / 3600;
+    console.log("Nombre d'heures :" + heures);
+    
+    let minutes = (duree % 3600) / 60;
+    console.log("Nombre de minutes :" + minutes);
+
+    let secondes = ((duree % 3600) % 60);
+    console.log("Nombre de secondes :" + secondes);*/
+    
+    let convertSeconds = function(sec) {
+            let heures = Math.floor(sec / 3600);
+            let minutes = Math.floor((sec - (heures * 3600)) / 60);
+            let secondes = sec - (heures * 3600) - (minutes * 60);
+            secondes = Math.round(secondes * 100) / 100
+           
+            let resultat = (heures < 10 ? "0" + heures : heures);
+            resultat += "-" + (minutes < 10 ? "0" + minutes : minutes);
+            resultat += "-" + (secondes < 10 ? "0" + secondes : secondes);
+            return resultat;
+         }
+         let nbSecondes = Number(prompt("Veuillez saisir un nombre de secondes à convertir"));
+         let duree = convertSeconds(nbSecondes);
+         document.getElementById("time").innerHTML = duree;
+
+        
+    </script>
+</body>
+</html>

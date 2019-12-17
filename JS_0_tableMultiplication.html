@@ -12,6 +12,7 @@
         // Table de multiplication
 
         let nombre = Number(prompt("Quelle table souhaitez-vous calculer entre 1 et 10 ?"));
+        let compteur = 10;
         console.log('Table de : ' + nombre)
         /*
         //boucle For
@@ -21,12 +22,12 @@
         }
         */
         /*Ajouter div contenant le texte de nos tables*/
-        for (let i = 1; i <= nombre; i++) {
+        for (let i = 1; i <= compteur; i++) {
             let div1 = document.createElement("div");
             div1.textContent = nombre + " x " + i + " = " + nombre * i;
             /*console.log(document.getElementsByTagName("body")[0]);
             document.getElementsByTagName("body")[0].appendChild(div1);*/
-            document.querySelector("body").appendChild(div1);
+            document.body.appendChild(div1);
         }
 
 

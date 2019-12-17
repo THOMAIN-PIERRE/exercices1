@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculatrice</title>
+	<style>
+		html, body{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			
+
+		}
+		.rangee{
+			display: flex;
+		}
+		.rangee div{
+			width: 150px;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid black;	
+			background-color: gray;
+			font-size: 30px;
+		}
+		#ecran{
+            width: 615px;
+            height: 100px;
+            text-align: right;
+            font-size: 50px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+        }
+        #nombre:hover {
+            background-color: orange;
+        }
+        #clear_error:hover {
+            background-color: blue;
+        }
+        #affichage:hover {
+            background-color: white;
+            font-weight: bold;
+        }
+
+	</style>
+</head>
+
+<body>
+	<div id="conteneur">
+		<input type="text" id="ecran" name="ecran" value="0">
+		<div class="rangee">
+			<div class="bouton1" id="nombre">1</div>
+			<div class="bouton2" id="nombre">2</div>
+			<div class="bouton3" id="nombre">3</div>
+			<div class="bouton+" id="nombre">+</div>
+		</div>
+		<div class="rangee">
+			<div class="bouton4" id="nombre">4</div>
+			<div class="bouton5" id="nombre">5</div>
+			<div class="bouton6" id="nombre">6</div>
+			<div class="bouton-" id="nombre">-</div>
+		</div>
+		<div class="rangee">
+			<div class="bouton7" id="nombre">7</div>
+			<div class="bouton8" id="nombre">8</div>
+			<div class="bouton9" id="nombre">9</div>
+			<div class="bouton*" id="nombre">*</div>
+		</div>
+		<div class="rangee">
+			<div class="bouton=" id="affichage">=</div>
+			<div class="boutonCE" id="clear_error">CE</div>
+			<div class="bouton0" id="nombre">0</div>
+			<div class="bouton/" id="nombre">/</div>
+		</div>
+
+	</div>
+
+	<script>
+		let valeur = document.getElementById("ecran");
+		
+		console.log(document.querySelectorAll("#nombre"), valeur);
+		let boutons = document.querySelectorAll("#nombre");
+		for (let b of boutons){
+			console.log(b);
+			b.addEventListener("click", function(e) {
+			console.log(e.target.textContent, valeur.value);
+			valeur.value += e.target.textContent;
+			})
+		}
+		let resultat = document.getElementById("affichage");
+		resultat.addEventListener("click", function(e){
+			valeur.value = eval(valeur.value);
+		})
+
+		
+         
+	</script>
+</body>
+
+</html>

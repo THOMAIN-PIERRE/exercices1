@@ -1,0 +1,100 @@
+html, body{
+    width : 100%;
+    height : 100%;
+    margin : 0;
+    padding : 0;
+}
+section{
+    text-align: center;
+    border: 2px, solid, black;
+}
+#un{
+    padding: 20px 40px;
+    background-color :lightgrey;
+    border: 2px, solid, black;
+}
+#un:hover {
+    background-color: orange;
+  }
+#deux{
+    padding: 20px 40px;
+    background-color :lightgrey;
+    border : 2px, solid, black;
+}
+#trois{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#plus{
+    padding: 20px 39.6px;
+    background-color :lightgrey;
+}
+#rangee1{
+    display: flex;
+    border: 2px, solid, black;
+}
+#quatre{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#cinq{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#six{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#moins{
+    padding: 20px 41.4px;
+    background-color :lightgrey;
+}
+#rangee2{
+    display: flex;
+}
+#sept{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#huit{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#neuf{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#etoile{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#rangee3{
+    display: flex;
+}
+#egal{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#zero{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#CE{
+    padding: 20px 40px;
+    background-color :lightgrey;
+}
+#slash{
+    padding: 20px 35px;
+    background-color :lightgrey;
+}
+#rangee4{
+    display: flex;
+}
+#name{
+    width: 237px;
+    height: 30px;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+

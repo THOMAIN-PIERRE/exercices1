@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="CalculatriceJS.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <section id="calculette">
+        <label for="ecran">Casio FX 180P+</label>
+
+        <input type="text" class="ecran" name="ecran" value="0" autocomplete="off" text-align="right">   
+        
+
+
+    <article id="rangee1">
+        <div id="un" onclick="bouton1">1</div>
+        <div id="deux" onclick="bouton2">2</div>
+        <div id="trois" onclick="bouton3">3</div>
+        <div id="plus" onclick="boutonPlus">+</div>
+    </article>
+    <article id="rangee2">
+        <div id="quatre">4</div>
+        <div id="cinq">5</div>
+        <div id="six">6</div>
+        <div id="moins">-</div>
+    </article>
+    <article id="rangee3">
+        <div id="sept">7</div>
+        <div id="huit">8</div>
+        <div id="neuf">9</div>
+        <div id="etoile">*</div>
+    </article>
+    <article id="rangee4">
+        <div id="egal">=</div>
+        <div id="zero">0</div>
+        <div id="CE">CE</div>
+        <div id="slash">/</div>
+    </article>
+    </section>
+
+
+    <script>
+
+        /*function btm(val) {
+         document.getElementById("calc-output").innerHTML += val;
+     }
+     function btmClean(){
+        document.getElementById("calc-output").innerHTML = "";
+     }
+     function btmPlus() {
+        document.getElementById("calc-output").innerHTML += "+";
+     }
+     function btmLess() {
+        document.getElementById("calc-output").innerHTML += "-";
+     }
+     function btmMultiply() {
+        document.getElementById("calc-output").innerHTML += "*";
+     }
+     function btmDivision() {
+        document.getElementById("calc-output").innerHTML += "/";
+     }
+
+     function btmEgal() {
+	      var egal = eval(document.getElementById('calc-output').innerHTML);
+	      document.getElementById('calc-output').innerHTML = egal;
+      }*/
+
+      // Obtenir les touches du documents
+let touches = document.querySelectorAll("#calculette div");
+
+// Initialisation d'un tableau d'opérateurs.
+let operateurs = ['/', 'x', '-', '+'];
+
+// Flag : Une décimale a été ajoutée?
+let decimaleAjoute = false;
+
+/* 
+ * Ajout dynamique d'une fonction sur les touches : 
+ * - Un évênement on click sur toutes les touches qui permettra d'éfféctuer les opérations. 
+ */
+for(let i = 0; i < touches.length; i++) {
+	touches[i].onclick = function(e) {
+	
+		// 1) Obtenir les valeurs des boutons et de l'écran.
+		let ecran = document.querySelector(".ecran");
+		let valeurEcran = ecran.innerHTML;
+		let valeurBouton = this.innerHTML;
+    
+		// 2) Traitement des différents boutons et évaluation finale.
+		
+		// Touche "reset".
+		if(valeurBouton == "C") {
+			
+			// Reset écran et reset flag decimale.
+			ecran.innerHTML = "";
+			decimaleAjoute = false;
+		
+		// Touche "=".
+		} else	if(valeurBouton == "="") {
+      			
+			// Initialisation de la variable de calcul par rapport
+			// à l'affichage à l'écran.
+			let calcul = valeurEcran;
+			
+			// Obtention du dernier caractère.
+			let dernierCaractere = valeurEcran[valeurEcran.length - 1];
+			
+			// Dans notre variable de calcul : Remplacement de "x" par "*".
+			calcul = calcul.replace(/x/g, '*');
+			
+			// Si le calcul se termine par un "." ou un opérateur, on enlève 
+			// cet opérateur.
+			if(operateurs.indexOf(dernierCaractere) > -1 
+			|| dernierCaractere == '.') {
+				calcul = calcul.replace(/.$/, '');
+			}
+			// Si il y a un calcul : utilisation de Eval pour que l'écran 
+			// change de valeur.
+      
+			if(calcul) {
+				ecran.innerHTML = eval(calcul);
+			}
+			decimaleAjoute = false;
+
+		} else if (operateurs.indexOf(valeurBouton) > -1) {		 
+			
+			/* 
+			 * Il reste quelques problèmes : 
+			 * 1. Le calcul avec deux opérateurs successifs doivent être 
+			 * interdits.
+			 * 2. Le calcul ne peut pas commencer par un opérateur, mis
+			 * à part un "-".
+			 * 3. Le calcul avec plus d'une décimale doit être interdit.
+			 */
+			 
+			// Obtention du dernier caractère de l'écran.
+			var dernierCaractere = valeurEcran[valeurEcran.length - 1];
+			
+			// Ajout de l'opérateur seulement si l'écran n'a pas d'opérateur
+			// comme dernier caractère.
+			
+			// Reset l'écran si l'écran vaut "-" et qu'on presse "+".
+			if (valeurEcran == '-' 
+			&& valeurBouton == '+') {
+				ecran.innerHTML = '';
+			} 
+			// Ajout "-" si l'écran est vide et qu'on presse "-".
+			else if (valeurEcran == ''
+			&& valeurBouton == '-') {				
+				ecran.innerHTML = valeurBouton;
+			} 
+			// Si il y a quelque chose dans l'écran et que ce n'est pas -
+			else if (valeurEcran != '' 
+			&& operateurs.indexOf(dernierCaractere) == -1) {
+				ecran.innerHTML += valeurBouton;
+			}
+			
+			// Si un opérateur existait déja à la fin, alors on le remplace
+			// par le nouveau.
+			if (operateurs.indexOf(dernierCaractere) > -1 
+			&& valeurEcran.length > 1) {
+			
+				// Ici, '.$' signifie la fin de  la chaine de caractère,
+				// donc n'importe quel caractère (qui sera un opérateur)
+				// a la fin de l'écran vas être remplacé par le nouveau 
+				// opérateur.
+				ecran.innerHTML = valeurEcran.replace(/.$/, valeurBouton);
+			}
+			
+			decimaleAjoute =false;
+		
+		} else if (valeurBouton == '.') {
+		
+			// maintenant, seulement le problème de décimale est restant. Nous
+			// le resolvons en utilisant un flag quand la décimale est déja 
+			// ajouté. Il sera reset quand un "=" or reset sera préssé.
+			if(!decimaleAjoute) {
+				ecran.innerHTML += valeurBouton;
+				decimaleAjoute = true;
+			}
+		} else {
+      
+			// Si c'est une autre touche que égal, ajout à la suite de l'écran.		
+			ecran.innerHTML += valeurBouton;
+		}
+		
+		// Prevent page jumps
+		e.preventDefault();
+	} 
+}
+
+        
+        
+    </script>
+</body>
+</html>

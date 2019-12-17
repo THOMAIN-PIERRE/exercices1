@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+
+
+    /*let monIdentifiant = "Pierre";
+    let monMotDePasse = "Thomain";
+    let identifiant = prompt("Veuillez saisir votre identifiant");
+    if (identifiant == monIdentifiant){
+        prompt("Vous avez indiqué le bon identifiant !");
+    } else{
+        prompt("L'identifiant que vous avez saisi est incorrect");
+    }
+    let motDePasse = prompt("Veuillez saisir un mot de passe");
+    if (motDePasse == monMotDePasse){
+        prompt("Vous avez indiqué le bon Mot de passe !");
+    } else{
+        prompt("Le mot de passe que vous avez saisi est incorrect");
+    }*/
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /*let identifiant = "Pierre";
+    let motDePasse = "Thomain";
+    let saisie;
+    let saisie2; 
+    let i = 0;
+    let j = 0; 
+    let nbEssaiMax = 3;
+    let error = false;
+    
+    while(saisie != identifiant && !error){
+        if(i < nbEssaiMax){
+            saisie = prompt("Entrez votre identifiant");
+            i ++;
+        } else {
+            error = true;
+        }
+    }
+    if(error){
+        alert("Vous avez dépassé le nombre d'essais autorisés !");
+    } else {
+        alert("Vous êtes identifié !");
+    }*/
+
+    
+    let identifiant = "Pierre";
+    let motDePasse = "Thomain";
+    let saisie;
+    let saisie2; 
+    let i = 0;
+    let j = 0; 
+    let nbEssaiMax = 3;
+    let error = false;
+    
+    while(saisie != identifiant && !error){
+        if(i < nbEssaiMax){
+            saisie = prompt("Entrez votre identifiant");
+            i ++;
+        } else {
+            error = true;
+        }
+    }
+    if(error){
+        alert("Vous avez dépassé le nombre d'essais autorisés !");
+    } else {
+        alert("Vous êtes identifié !");
+        while(saisie2 != motDePasse && !error){
+        if(j < nbEssaiMax){
+            saisie2 = prompt("Entrez votre mot de passe");
+            j ++;
+        } else {
+            error = true;
+        }
+    }
+    if(error){
+        alert("Vous avez dépassé le nombre d'essais autorisés !");
+    } else {
+        alert("Bienvenue Pierre !");
+    }
+    }
+
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Algorithme affichant la table de 2
+       /*let valeur = 2;
+        let compteur = 10;              
+
+        for (let i = 1; i <= compteur; i++) {
+            let div1 = document.createElement("div");
+            div1.textContent = valeur + " x " + i + " = " + valeur * i;
+            document.body.appendChild(div1);
+        }*/
+        // Algorithme affichant toutes les tables
+        let compteur = 10;    
+
+        for (let i = 1; i <= compteur; i++) {
+            let p = document.createElement("p");
+            p.textContent = "Table de : " + i;
+            document.body.appendChild(p);
+        for (let j = 1; j <= compteur; j++) {
+            let div1 = document.createElement("div");
+            div1.textContent = i + " x " + j + " = " + i * j;
+            document.body.appendChild(div1);
+        }
+    }
+        
+    
+    </script>
+</body>
+</html>
