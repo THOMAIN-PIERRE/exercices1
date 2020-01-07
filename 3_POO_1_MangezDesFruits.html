@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="3_POO_1_MangezDesFruits.css" rel="stylesheet" type="text/css" />
+<style>
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+} 
+
+</style>
+</head>
+<body>
+        
+    <script>
+    //Ajout balise canvas dans le corps du HTML
+let ajoutCanvasDansBody =  document.createElement("canvas");
+ajoutCanvasDansBody.id = "monCanvas";
+ajoutCanvasDansBody.textContent = "Normalement, une image s'affiche";
+document.body.appendChild(ajoutCanvasDansBody);
+console.log(ajoutCanvasDansBody); 
+
+let canvas = document.getElementById('monCanvas'); //je cible l'élément canvas par son Id
+let ctx = canvas.getContext('2d'); //pour obtenir le contexte de dessin
+let img = new Image();
+img.src="./images/JS_5_dessiner (canvas)/pomme_rouge.png";
+img.addEventListener("load", function() { 
+    ctx.canvas.width  = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+
+    ctx.drawImage(img,800,250,500,500); 
+    //ctx.fillStyle = "#FF0000";
+    //ctx.fillRect(20,20,1500,1000);
+},false);
+
+
+
+
+
+
+
+
+/*class Canvas{
+    constructor(w,h){
+        this.width = w;
+        this.height = h;
+        this.creationCanvas();
+    }
+    creationCanvas(){
+        this.canvas = document.createElement("canvas");
+        this.ctx2D = this.canvas.getContext("2d"); // Contexte du canvas pour dessiner les images
+        this.canvas.width = this.w;
+        this.canvas.height = this.h;
+        document.body.appendChild(this.canvas);
+
+    }
+}*/
+
+
+
+
+/*context.drawImage(img,x,y,width,height);//a utiliser pour positionner mon image au centre de ma page*/
+
+
+
+    </script>
+</body>
+</html>

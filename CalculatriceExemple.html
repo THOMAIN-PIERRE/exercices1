@@ -51,52 +51,69 @@
 
 <body>
 	<div id="conteneur">
-		<input type="text" id="ecran" name="ecran" value="0">
+		<input type="text" id="ecran" name="ecran" value="">
 		<div class="rangee">
 			<div class="bouton1" id="nombre">1</div>
 			<div class="bouton2" id="nombre">2</div>
 			<div class="bouton3" id="nombre">3</div>
-			<div class="bouton+" id="nombre">+</div>
+			<div class="operateur+" id="nombre">+</div>
 		</div>
 		<div class="rangee">
 			<div class="bouton4" id="nombre">4</div>
 			<div class="bouton5" id="nombre">5</div>
 			<div class="bouton6" id="nombre">6</div>
-			<div class="bouton-" id="nombre">-</div>
+			<div class="operateur-" id="nombre">-</div>
 		</div>
 		<div class="rangee">
 			<div class="bouton7" id="nombre">7</div>
 			<div class="bouton8" id="nombre">8</div>
 			<div class="bouton9" id="nombre">9</div>
-			<div class="bouton*" id="nombre">*</div>
+			<div class="operateur*" id="nombre">*</div>
 		</div>
 		<div class="rangee">
 			<div class="bouton=" id="affichage">=</div>
 			<div class="boutonCE" id="clear_error">CE</div>
 			<div class="bouton0" id="nombre">0</div>
-			<div class="bouton/" id="nombre">/</div>
+			<div class="operateur/" id="nombre">/</div>
 		</div>
 
 	</div>
 
 	<script>
-		let valeur = document.getElementById("ecran");
 		
-		console.log(document.querySelectorAll("#nombre"), valeur);
+		let valeur = document.getElementById("ecran");
+		console.log(valeur);
+
 		let boutons = document.querySelectorAll("#nombre");
-		for (let b of boutons){
-			console.log(b);
-			b.addEventListener("click", function(e) {
-			console.log(e.target.textContent, valeur.value);
-			valeur.value += e.target.textContent;
+		console.log(document.querySelectorAll("#nombre"));
+
+		for (let indice of boutons){
+			//console.log(indice);
+			indice.addEventListener("click", function(e){ //la fonction met à disposition un évènement
+			//console.log(e.target.textContent, valeur.value);
+			valeur.value += e.target.textContent; //la valeur à l'écran sera égale à la somme de la valeur de l'écran + le contenu de la cible de l'évènement cad la valeur associée à l'indice cad le textcontent de l'indice
 			})
-		}
+			}
+			//A ce stade là je peux cliquer sur les nombres et les opérateurs et ils s'affichent dans l'
+			//Par contre il ne se passe rien quand j'appuie sur = ou sur CE
 		let resultat = document.getElementById("affichage");
 		resultat.addEventListener("click", function(e){
 			valeur.value = eval(valeur.value);
 		})
+		let clean = document.getElementById("clear_error");
+		clean.addEventListener("click", function(e){
+			valeur.value = "";
+		})
+		for (let indice of operateur){
+			//console.log(indice);
+			indice.addEventListener("click", function(e){ //la fonction met à disposition un évènement
+			//console.log(e.target.textContent, valeur.value);
+			valeur.value += e.target.textContent; //la valeur à l'écran sera égale à la somme de la valeur de l'écran + le contenu de la cible de l'évènement cad la valeur associée à l'indice cad le textcontent de l'indice
+			})
+			}
+	
+    
 
-		
          
 	</script>
 </body>
